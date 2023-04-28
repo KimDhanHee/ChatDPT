@@ -1,0 +1,39 @@
+[versions]
+androidGradlePlugin = "7.4.1"
+kotlin = "1.8.10"
+
+androidxCore = "1.10.0"
+androidxLifecycle = "2.6.1"
+androidxComposeBom = "2023.01.00"
+androidxComposeCompiler = "1.4.2"
+androidxComposeActivity = "1.6.1"
+
+junit4 = "4.13.2"
+androidxTestExt = "1.1.4"
+androidxEspresso = "3.5.1"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-compose-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-compose-test-junit = { module = "androidx.compose.ui:ui-test-junit4" }
+androidx-compose-icons-core = { module = "androidx.compose.material:material-icons-core" }
+androidx-compose-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-compose-activity = { module = "androidx.activity:activity-compose", version.ref = "androidxComposeActivity" }
+
+junit4 = { module = "junit:junit", version.ref = "junit4" }
+androidx-test-ext = { module = "androidx.test.ext:junit", version.ref = "androidxTestExt" }
+androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidxEspresso" }
+
+[bundles]
+androidx-compose = ["androidx-compose-material3", "androidx-compose-preview", "androidx-compose-tooling", "androidx-compose-icons-core", "androidx-compose-icons-extended"]
