@@ -35,7 +35,6 @@ android {
     }
     buildFeatures {
         compose = true
-        dataBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
@@ -48,6 +47,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:designsystem"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
