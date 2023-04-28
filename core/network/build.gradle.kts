@@ -1,8 +1,11 @@
 import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 
 plugins {
+  kotlin("kapt")
   id("com.android.library")
   id("org.jetbrains.kotlin.android")
+  id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -28,4 +31,7 @@ android {
 dependencies {
   implementation(libs.retrofit.core)
   implementation(libs.retrofit.kotlinx.serialization)
+
+  implementation(libs.hilt.android)
+  kapt(libs.hilt.compiler)
 }

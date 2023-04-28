@@ -1,6 +1,10 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
+    kotlin("kapt")
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -57,4 +61,7 @@ dependencies {
     androidTestImplementation(composeBom)
     implementation(libs.bundles.androidx.compose)
     implementation(libs.androidx.compose.activity)
+
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 }
