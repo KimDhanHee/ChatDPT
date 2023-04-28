@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ChatDPT"
-include ':app'
+include(":app")
