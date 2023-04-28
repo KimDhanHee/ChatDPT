@@ -1,4 +1,4 @@
-package dany.tothemoon.chatdpt.ui.theme
+package dany.tothemoon.core.designsystem.theme
 
 import androidx.compose.material3.Typography
 
